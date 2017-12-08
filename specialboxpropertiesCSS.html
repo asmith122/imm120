@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<title>CSS - Special Box Properties - IMM 120</title>
+
+<meta charset="utf-8">
+
+<!-- Note the use of the float and clear CSS properties below -->
+
+<style type="text/css">
+
+ #wrapper {
+ margin-left: auto; 
+ margin-right: auto; 
+ width: 80%; 
+ min-width: 700px;
+ }
+
+ #floatbox {
+ width: 125px; 
+ height: 150px; 
+ float: left; 
+ background-color: tan; 
+ padding: .5em;
+ margin-right: .5em; 
+ border-style: solid;
+ border-color: orange #00ff00 blue red;
+ border-width: 5px;
+ background-image: 
+ -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#8fa5ce));/* most notably older versions of Chrome and Safari */
+ background-image: 
+ -moz-linear-gradient(top, #ffffff, #8fa5ce); /* most notably Firefox */
+ background-image: linear-gradient (#ffffff, #8fa5ce);
+ }
+ /* filter for I.E. */
+
+.dropdown {
+ clear: left;
+ } 
+ /* clear can be set to right, left, or both.  It is 
+ often used to terminate or clear a float! */
+
+#left {
+float: left;
+}
+
+p {
+margin-top:.25em
+}
+
+h2 {
+background-color: #ff0000; 
+opacity: 0.6;
+} 
+
+/* opacity - configures the transparency of the background color.  Values 
+range from 0 (completely transparent) to 1 (no transparency) */
+
+/* border-radius used to create rounded corners */
+div#rounded
+{
+border:2px solid #a1a1a1;
+padding:10px 40px; 
+background:#dddddd;
+width:200px;
+margin-top:60px;
+border-radius:10px;
+}
+
+/* -webkit-border-radius:25px; /* Safari */
+-moz-border-radius:25px; /* Firefox 3.6 and earlier */ */
+
+</style>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+<p id="floatbox">The special box properties let you float an image or box of text to the left or right of 
+the content on the page.  <br>--Joel Sklar</p>
+
+<p>The width property lets you set the horizontal width of an element.  Width is not intended 
+for normal block-level elements but you can use it to create floating text boxes.  In most cases, 
+you will set the padding or margins of the elements rather than explicitly stating a width.</p>
+
+<p>The float property lets you position an element to the left or right edge of its parent element.  
+Float is most commonly used for img elements, allowing for alignment of an image to the left or 
+right of text.</p>
+
+<h2 class="dropdown">Clear - H2</h2>
+
+<p><img src="border.png" alt="Picture" id="left">The clear property lets you control the flow of 
+text around floated elements.  You will only use the clear property when you are using the float 
+property.  Clear lets you force text to appear beneath a floated element, 
+rather than next to it.</p>
+
+<div id="rounded" class="dropdown">This div has rounded corners!</div>
+
+</div>
+
+</body>
+
+</html>
